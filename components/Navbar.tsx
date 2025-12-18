@@ -74,7 +74,12 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <a href="#" className="block px-3 py-2 text-violet-400 font-bold">Download Resume</a>
+
+            <div className="flex items-center gap-3 px-3 py-2">
+              <a href="https://github.com/YastecHub" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors"><Github size={20} /></a>
+              <a href="https://www.linkedin.com/in/yasir-oyebo" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors"><Linkedin size={20} /></a>
+              <a href="https://drive.google.com/uc?export=download&id=1AJtsGHtnK2hT1gZc238VA_-Yydio4U_Y" target="_blank" rel="noreferrer" className="ml-auto px-3 py-2 bg-white/10 hover:bg-white/20 border border-white/10 rounded-full text-sm font-medium transition-all">Resume</a>
+            </div>
           </div>
         </div>
       )}
