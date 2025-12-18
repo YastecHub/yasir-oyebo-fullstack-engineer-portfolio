@@ -16,8 +16,8 @@ export const EXPERIENCES: ExperienceItem[] = [
     id: "codefactory",
     role: "Backend Developer (Fullstack)",
     company: "Codefactory Innovative Hub",
-    period: "Mar 2025 – Present",
-    description: "Built WAAS (Wallet as a Service) system—scalable fintech wallet APIs handling transactions, balances, and KYC at an agile software firm.",
+    period: "June 2025 – Present",
+    description: "Built WAAS (Wallet as a Service) system, scalable fintech wallet APIs handling transactions, balances, and KYC at an agile software firm.",
     highlights: [
       "Engineered secure C#/.NET Core endpoints for real-time fund transfers",
       "Integrated React prototypes for wallet dashboards, ensuring fullstack cohesion",
@@ -29,11 +29,11 @@ export const EXPERIENCES: ExperienceItem[] = [
     id: "teknikforce",
     role: ".NET Backend Developer",
     company: "TekniKForce (Remote)",
-    period: "Jan 2025 – Mar 2025",
+    period: "Jan 2025 – May 2025",
     description: "Remote role in international team building marketing automation tools & SaaS web apps.",
     highlights: [
       "Contributed Node.js microservices alongside .NET for hybrid SaaS—fullstack API/UI sync",
-      "Built/secured RESTful APIs for user mgmt & product licensing",
+      "Built/secured RESTful APIs for user cookies & product licensing",
       "Delivered modules for 5+ client projects globally"
     ]
   },
@@ -44,7 +44,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     period: "Feb 2024 – Mar 2024",
     description: "Developed Telex.im AI comms; integrated GroqAI securely.",
     highlights: [
-      "Blended Node.js for comms endpoints with React hooks for AI chat previews",
+      "Built AI agents in C# and integrated GroqAI for Telex AI features",
       "Boosted team comms 30%",
       "Scalable C# feature sprints"
     ]
@@ -136,7 +136,7 @@ export const PROJECTS: Project[] = [
     solution: "ASP.NET Core backend + Razor Pages frontend with dynamic SQL generation.",
     impact: "Streamlined reporting for 100+ users.",
     tech: ["ASP.NET Core", "C#", "SQL Server", "Razor"],
-    github: "https://github.com/YastecHub",
+    github: "https://github.com/Whitteintel/AMJNReportSystem",
     imagePath: "/amjnReportSystem.png",
     mockupPrompt: "Professional report dashboard screenshot: Filter panels, dynamic charts in SQL queries, green success badges.",
     stats: [{ label: "Users", value: "100+" }, { label: "Query Speed", value: "+40%" }]
@@ -153,5 +153,44 @@ export const PROJECTS: Project[] = [
     imagePath: "/mansorySupplyHub.png",
     mockupPrompt: "E-commerce backend admin panel: Order flow diagram, payment gateway viz, blue .NET theme.",
     stats: [{ label: "Items", value: "500+" }, { label: "Uptime", value: "99.9%" }]
+  },
+  {
+    id: "fuoye-houseit",
+    title: "FuoyeHouseIt API",
+    category: "Student Housing Platform",
+    challenge: "Scalable accommodation booking system for university students with secure payment processing.",
+    solution: "Clean Architecture .NET 9 API with CQRS, MediatR, EF Core + PostgreSQL, JWT auth, and Cloudinary integration.",
+    impact: "Production-ready API serving student housing marketplace with agent management and wallet transactions.",
+    tech: ["ASP.NET Core", "PostgreSQL", "MediatR", "JWT", "Cloudinary"],
+    github: "https://github.com/YastecHub/FuoyeHouseIt",
+    imagePath: "/fuoyeHouseItImage.png",
+    mockupPrompt: "Student housing platform: Clean API architecture, booking flow, student dashboard mockup in professional blue gradient.",
+    stats: [{ label: "Architecture", value: "Clean" }, { label: "Target", value: "Students" }]
+  },
+  {
+    id: "faq-responder",
+    title: "FAQResponder Bot",
+    category: "Telex Integration",
+    challenge: "Automated customer support for high-volume chat channels.",
+    solution: "Intelligent FAQ matching system with Telex API integration for real-time responses.",
+    impact: "Reduced support workload by automating common queries in chat channels.",
+    tech: ["Node.js", "Telex API", "NLP", "WebHooks"],
+    github: "https://github.com/telexintegrations/FAQResponder",
+    imagePath: "/faqResponderImage.png",
+    mockupPrompt: "Chat bot interface: FAQ matching flow, automated responses, Telex integration dashboard in modern purple theme.",
+    stats: [{ label: "Response Time", value: "<1s" }, { label: "Accuracy", value: "95%" }]
+  },
+  {
+    id: "blazor-product-manager",
+    title: "Blazor Product Manager",
+    category: "Enterprise CRUD System",
+    challenge: "Efficient product management with real-time updates and notifications.",
+    solution: "Blazor Server app with comprehensive CRUD operations, API integration, and Blazored.Toast notifications.",
+    impact: "Streamlined product lifecycle management with component-based architecture.",
+    tech: ["Blazor Server", "ASP.NET Core", "Entity Framework", "SignalR"],
+    github: "https://github.com/YastecHub/BlazorApp",
+    imagePath: "/blazorProductManagerImage.png",
+    mockupPrompt: "Blazor product dashboard: CRUD interface, real-time notifications, component hierarchy in clean .NET theme.",
+    stats: [{ label: "Components", value: "15+" }, { label: "Performance", value: "A+" }]
   }
 ];
