@@ -44,8 +44,6 @@ const Hero: React.FC = () => {
               </div>
             </div>
             
-            {/* NAME - Optimized for One Line */}
-            {/* usage of whitespace-nowrap forces it to one line on Desktop (lg) */}
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-display font-bold mb-6 tracking-tight leading-tight lg:whitespace-nowrap">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
                 {HERO_DATA.name}

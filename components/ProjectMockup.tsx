@@ -41,8 +41,6 @@ const ProjectMockup: React.FC<ProjectMockupProps> = ({ type }) => {
   );
 };
 
-// --- Mockup Sub-Components ---
-
 const FintechDashboard = () => (
   <div className="flex flex-col gap-3 h-full">
     {/* Header */}

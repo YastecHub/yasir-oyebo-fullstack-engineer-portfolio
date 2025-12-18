@@ -4,7 +4,7 @@ import { Database, Server, Code, Layout, Terminal, Coffee, Zap, MessageSquare, S
 export const HERO_DATA = {
   name: "Yasir Oladimeji Oyebo",
   tagline: "Fullstack Engineer | C#/.NET Core + React/Node.js | 3+ Years Building End-to-End Apps",
-  bio: "Lagos-based Fullstack Engineer with 3+ years crafting seamless backends (ASP.NET, SQL, GroqAI) and frontends (React UIs). Experiences include MGQS (AMJN reports), HNG (Telex AI), and Codefactory (WAAS wallets). Pharmacy-student-turned-dev solving real pains like fintech txns & birthday automations. Open to remote fullstack gigs.",
+  bio: "Lagos-based Fullstack Engineer with 3+ years crafting seamless backends (C#, ASP.NET, Node.js, SQL) and frontends (React UIs). Experiences include MGQS (AMJN reports), HNG (Telex AI), and Codefactory (WAAS wallets). Pharmacy-student-turned-dev solving real pains like fintech txns & AI integrations. Open to remote fullstack gigs.",
   cta: "Explore Fullstack Builds",
   email: "yasiroyebo@gmail.com",
   phone: "+234 9068913009",
@@ -17,7 +17,7 @@ export const EXPERIENCES: ExperienceItem[] = [
     role: "Backend Developer (Fullstack)",
     company: "Codefactory Innovative Hub",
     period: "Mar 2025 – Present",
-    description: "Led WAAS (Wallet as a Service) system—scalable fintech wallet APIs handling transactions, balances, and KYC at an agile software firm.",
+    description: "Built WAAS (Wallet as a Service) system—scalable fintech wallet APIs handling transactions, balances, and KYC at an agile software firm.",
     highlights: [
       "Engineered secure C#/.NET Core endpoints for real-time fund transfers",
       "Integrated React prototypes for wallet dashboards, ensuring fullstack cohesion",
@@ -51,7 +51,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "mgqs",
-    role: "Software Developer Intern",
+    role: "Fullstack Software Developer Intern",
     company: "MGQS Nigeria",
     period: "June 2023 – Present",
     description: "Teamed with 7 engineers on AMJNReportSystem—designed data/reporting enhancements.",
@@ -120,6 +120,7 @@ export const PROJECTS: Project[] = [
     solution: "GroqAI + Node.js endpoints + React previews.",
     impact: "Secure AI features; Boosted team comms 30%.",
     tech: ["Node.js", "React", "GroqAI", "WebSockets"],
+    github: "https://github.com/telexintegrations/SocialMediaAgent",
     mockupPrompt: "Chat API flow: Message threads with AI responses, endpoint logs, purple gradient UI.",
     stats: [{ label: "Comms Boost", value: "30%" }]
   },
