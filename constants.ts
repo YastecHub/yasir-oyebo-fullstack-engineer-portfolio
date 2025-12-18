@@ -85,6 +85,7 @@ export const PROJECTS: Project[] = [
     impact: "Interactive UI for 50+ users; automated 100+ celebrations.",
     tech: ["React", ".NET 8", "Node.js", "Twilio"],
     github: "https://github.com/YastecHub/BirthdayBuddy",
+    imagePath: "/birthdayBuddyImage.png",
     mockupPrompt: "Fullstack app screenshot: React dashboard with birthday calendar, group chat modals, backend API flow diagram in purple-blue gradient—vibrant, user-friendly.",
     stats: [{ label: "Users", value: "50+" }, { label: "Events", value: "100+" }]
   },
@@ -97,6 +98,7 @@ export const PROJECTS: Project[] = [
     impact: "Supported 10K+ simulated txns; Boosted scalability 40%.",
     tech: ["ASP.NET Core", "React", "SQL Server", "Microservices"],
     github: "https://github.com/YastecHub",
+    imagePath: "/waasImage.png",
     mockupPrompt: "Fullstack wallet: React balance charts + .NET backend endpoints in dark mode with professional purple-blue gradient.",
     stats: [{ label: "Txns", value: "10K+" }, { label: "Scale", value: "+40%" }]
   },
@@ -109,6 +111,7 @@ export const PROJECTS: Project[] = [
     impact: "Reusable fintech library; 100+ tests passed.",
     tech: ["ASP.NET Core", "C#", "Paystack API"],
     github: "https://github.com/YastecHub/PayStackImplementationTesting",
+    imagePath: "/paystackIntegrations.png",
     mockupPrompt: "Payment gateway simulator: Transaction timelines, verification badges, secure lock icons.",
     stats: [{ label: "Tests", value: "100+" }, { label: "Rating", value: "A+" }]
   },
@@ -121,6 +124,7 @@ export const PROJECTS: Project[] = [
     impact: "Secure AI features; Boosted team comms 30%.",
     tech: ["Node.js", "React", "GroqAI", "WebSockets"],
     github: "https://github.com/telexintegrations/SocialMediaAgent",
+    imagePath: "/telexImage.png",
     mockupPrompt: "Chat API flow: Message threads with AI responses, endpoint logs, purple gradient UI.",
     stats: [{ label: "Comms Boost", value: "30%" }]
   },
@@ -133,6 +137,7 @@ export const PROJECTS: Project[] = [
     impact: "Streamlined reporting for 100+ users.",
     tech: ["ASP.NET Core", "C#", "SQL Server", "Razor"],
     github: "https://github.com/YastecHub",
+    imagePath: "/amjnReportSystem.png",
     mockupPrompt: "Professional report dashboard screenshot: Filter panels, dynamic charts in SQL queries, green success badges.",
     stats: [{ label: "Users", value: "100+" }, { label: "Query Speed", value: "+40%" }]
   },
@@ -145,6 +150,7 @@ export const PROJECTS: Project[] = [
     impact: "Streamlined supplier orders; Robust endpoints for 500+ items.",
     tech: ["ASP.NET Core", "Entity Framework", "Braintree"],
     github: "https://github.com/YastecHub/MansorySupplyHub",
+    imagePath: "/mansorySupplyHub.png",
     mockupPrompt: "E-commerce backend admin panel: Order flow diagram, payment gateway viz, blue .NET theme.",
     stats: [{ label: "Items", value: "500+" }, { label: "Uptime", value: "99.9%" }]
   }

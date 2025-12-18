@@ -46,7 +46,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {/* Static Mockup Area */}
       <div className="relative h-48 w-full bg-slate-950 overflow-hidden border-b border-slate-800 group-hover:border-violet-500/30 transition-colors">
         <div className="w-full h-full transform group-hover:scale-105 transition-transform duration-700">
-           <ProjectMockup type={project.id} />
+           {project.imagePath ? (
+             <img
+               src={project.imagePath}
+               alt={project.title}
+               className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition duration-700 filter grayscale-[20%] group-hover:grayscale-0"
+             />
+           ) : (
+             <ProjectMockup type={project.id} />
+           )}
         </div>
         
         {/* Category Badge */}
