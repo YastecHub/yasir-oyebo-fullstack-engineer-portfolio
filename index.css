@@ -203,12 +203,13 @@ body {
   width: min(100%, 48rem);
   margin: 0 auto;
   padding: 2.5rem 1.25rem 0;
+  position: relative;
 }
 
 @media (max-width: 640px) {
   .home-layout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: block;
+    padding-top: 2rem;
   }
 }
 
@@ -259,21 +260,29 @@ body {
   border-radius: 999px;
   border: 1px solid var(--line);
   box-shadow: 0 1px 0 var(--line), var(--shadow);
-  margin-top: 5rem;
+  margin-top: 6.5rem;
   animation: 0.68s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both portraitIn;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s;
+  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s, filter 0.42s;
 }
 
 .portrait:hover {
-  transform: scale(1.04);
+  filter: saturate(1.08);
+  transform: translateY(-3px) rotate(-1deg) scale(1.03);
 }
 
 @media (max-width: 640px) {
+  .home-copy p:first-of-type {
+    min-height: 7.2rem;
+    padding-right: 7.5rem;
+  }
+
   .portrait {
-    margin-top: 0;
-    width: 6.5rem;
-    height: 6.5rem;
-    order: -1;
+    width: 6.85rem;
+    height: 6.85rem;
+    margin: 0;
+    position: absolute;
+    top: 5.25rem;
+    right: 1.25rem;
   }
 }
 

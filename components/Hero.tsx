@@ -36,23 +36,21 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Right Column: Clean Circular Portrait */}
-      <div className="flex justify-center sm:justify-end">
-        {imageFailed ? (
-          <div className="portrait flex items-center justify-center font-mono text-lg font-bold">
-            YO
-          </div>
-        ) : (
-          <img
-            className="portrait"
-            src="/portfolio_pics.jpg"
-            alt={HERO_DATA.fullName}
-            width={140}
-            height={140}
-            loading="eager"
-            onError={() => setImageFailed(true)}
-          />
-        )}
-      </div>
+      {imageFailed ? (
+        <div className="portrait flex items-center justify-center font-mono text-lg font-bold">
+          YO
+        </div>
+      ) : (
+        <img
+          className="portrait"
+          src="/portfolio_pics.jpg"
+          alt={HERO_DATA.fullName}
+          width={140}
+          height={140}
+          loading="eager"
+          onError={() => setImageFailed(true)}
+        />
+      )}
     </section>
   );
 };
