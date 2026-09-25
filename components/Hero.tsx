@@ -12,15 +12,15 @@ const Hero: React.FC = () => {
 
         <div id="about">
           <p>
-            I am a <strong>Backend Software Engineer</strong> specializing in event-driven
-            microservices, distributed caching (Redis), Kafka event streaming, and SQL
-            performance optimization.
+            I am a <strong>Software Engineer</strong> specializing in backend architecture,
+            event-driven microservices, and full-stack product interfaces with C#/.NET,
+            TypeScript, React, Kafka, Redis, and SQL.
           </p>
 
           <p>
-            I turn complex product requirements into reliable systems: architecting Clean
-            Architecture APIs in C# and ASP.NET Core, and designing Kafka-decoupled microservices
-            processing <strong>10,000+ daily transactions</strong>.
+            I turn complex product requirements into reliable systems: architecting high-throughput
+            APIs in C# and ASP.NET Core, designing Kafka-decoupled microservices processing{' '}
+            <strong>10,000+ daily transactions</strong>, and shipping modern web interfaces.
           </p>
 
           <p>

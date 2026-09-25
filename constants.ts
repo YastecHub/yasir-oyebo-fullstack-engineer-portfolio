@@ -3,8 +3,8 @@ import { Project, ExperienceItem, Skill, SkillType } from './types';
 export const HERO_DATA = {
   name: "Yasir Oyebo",
   fullName: "Yasir Oyebo Oladimeji",
-  tagline: "Backend Software Engineer | Distributed Systems, Microservices, C#/.NET, Kafka, Redis, SQL",
-  bio: "Backend Software Engineer specializing in event-driven microservices, distributed caching (Redis), Kafka event streaming, LLM API integration, and SQL performance optimization across fintech, e-commerce, and AI domains. Delivered production systems processing 10,000+ daily transactions using Clean Architecture, CQRS, DDD, and fault-tolerant microservice patterns.",
+  tagline: "Software Engineer | Backend Architecture, Distributed Systems, Full Stack (C#/.NET, TypeScript, React, Kafka, Redis, SQL)",
+  bio: "Software Engineer specializing in backend architectures and full-stack systems: event-driven microservices, distributed caching (Redis), Kafka event streaming, LLM integrations, and modern web interfaces across fintech, e-commerce, and enterprise domains. Delivered production systems processing 10,000+ daily transactions with Clean Architecture, CQRS, and high-throughput reliability.",
   location: "Lagos, Nigeria",
   timezone: "Africa/Lagos",
   email: "yasiroyebo@gmail.com",
