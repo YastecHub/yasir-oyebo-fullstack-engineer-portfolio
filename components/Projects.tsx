@@ -89,10 +89,10 @@ const Projects: React.FC = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="flex items-baseline justify-between gap-4">
+              <div className="work-award-row">
                 <span>{item.title}</span>
                 {item.award && (
-                  <span className="text-xs font-mono text-faint shrink-0">
+                  <span className="work-award-badge">
                     {item.award}
                   </span>
                 )}

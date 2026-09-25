@@ -84,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             title="Open Resume"
           >
             <FileText size={15} />
-            <span>Resume</span>
+            <span className="hidden sm:inline">Resume</span>
           </a>
         </div>
 
