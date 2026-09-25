@@ -1,17 +1,17 @@
 import { Project, ExperienceItem, Skill, SkillType } from './types';
 
 export const HERO_DATA = {
-  name: "Yasir Oyebo",
-  fullName: "Yasir Oyebo Oladimeji",
+  name: "Yasir Oladimeji",
+  fullName: "Yasir Oladimeji",
   tagline: "Software Engineer | Backend Architecture, Distributed Systems, Full Stack (C#/.NET, TypeScript, React, Kafka, Redis, SQL)",
   bio: "Software Engineer specializing in backend architectures and full-stack systems: event-driven microservices, distributed caching (Redis), Kafka event streaming, LLM integrations, and modern web interfaces across fintech, e-commerce, and enterprise domains. Delivered production systems processing 10,000+ daily transactions with Clean Architecture, CQRS, and high-throughput reliability.",
   location: "Lagos, Nigeria",
   timezone: "Africa/Lagos",
   email: "yasiroyebo@gmail.com",
   phone: "+234 906 891 3009",
-  resumeUrl: "/Yasir_Oyebo_Resume.pdf",
+  resumeUrl: "/Yasir_Oladimeji_Resume.pdf",
   googleDriveResumeUrl: "https://drive.google.com/file/d/1rXIhmDofBgO1s50vHLWsyqiZRzdSqr3A/view?usp=sharing",
-  localResumeUrl: "/Yasir_Oyebo_Resume.pdf",
+  localResumeUrl: "/Yasir_Oladimeji_Resume.pdf",
   github: "https://github.com/YastecHub",
   linkedin: "https://linkedin.com/in/yasir-oyebo0"
 };

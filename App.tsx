@@ -44,7 +44,7 @@ const App: React.FC = () => {
       ReactGA.send({
         hitType: "pageview",
         page: window.location.pathname,
-        title: "Yasir Oyebo | Backend Software Engineer"
+        title: "Yasir Oladimeji | Software Engineer"
       });
     } catch {}
 
