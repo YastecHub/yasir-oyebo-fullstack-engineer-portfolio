@@ -23,8 +23,9 @@ export interface ExperienceItem {
 
 export enum SkillType {
   BACKEND = 'Backend',
+  ARCHITECTURE = 'Architecture',
   DATABASE = 'Database',
-  FRONTEND = 'Frontend',
+  DEVOPS = 'DevOps',
   SOFT = 'Soft Skills'
 }
 
