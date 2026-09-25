@@ -11,7 +11,7 @@ const ROLES: MinimalRole[] = [
   {
     title: "Software Engineer",
     company: "Whitteintel Limited",
-    period: "2026 — Present",
+    period: "2026 - Present",
     summary: "Architecting the WhitteIntelCoop API with CQRS and MediatR to decouple read/write workloads and reduce query latency under write-heavy loads."
   },
   {

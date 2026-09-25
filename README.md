@@ -1,4 +1,4 @@
-# Yasir Oyebo — Backend Software Engineer Portfolio
+# Yasir Oyebo - Backend Software Engineer Portfolio
 
 This repository contains a minimal personal portfolio built with React + Vite showcasing backend systems, professional experience, selected work, awards, and contact links.
 
