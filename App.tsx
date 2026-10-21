@@ -26,15 +26,27 @@ const App: React.FC = () => {
     setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
   };
 
-  // Mouse move listener for subtle spotlight effect
+  // Pointer spotlight: at most one CSS update per animation frame
   useEffect(() => {
+    let frame = 0;
+    let x = 0;
+    let y = 0;
     const handleMouseMove = (e: MouseEvent) => {
-      document.documentElement.style.setProperty('--pointer-x', `${e.clientX}px`);
-      document.documentElement.style.setProperty('--pointer-y', `${e.clientY}px`);
+      x = e.clientX;
+      y = e.clientY;
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        document.documentElement.style.setProperty('--pointer-x', `${x}px`);
+        document.documentElement.style.setProperty('--pointer-y', `${y}px`);
+      });
     };
 
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
 
   // Analytics

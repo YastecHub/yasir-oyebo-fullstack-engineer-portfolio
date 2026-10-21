@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="site-footer">
       <div>
-        <span className="opacity-60">Copyright 2026 / </span>
+        <span className="opacity-60">Copyright {new Date().getFullYear()} / </span>
         <span className="text-text font-medium">{HERO_DATA.name}</span>
       </div>
 

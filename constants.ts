@@ -1,4 +1,4 @@
-import { Project, ExperienceItem, Skill, SkillType } from './types';
+import { Project, ExperienceItem } from './types';
 
 export const HERO_DATA = {
   name: "Yasir Oladimeji",
@@ -19,6 +19,7 @@ export const HERO_DATA = {
 export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "whitteintel",
+    summary: "Architecting the WhitteIntelCoop API with CQRS and MediatR to decouple read/write workloads and reduce query latency under write-heavy loads.",
     role: "Software Engineer",
     company: "Whitteintel Limited",
     period: "Jan 2026 – Present",
@@ -31,6 +32,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "codefactory",
+    summary: "Built a production Wallet-as-a-Service (WaaS) platform and decoupled ledger writes with an Apache Kafka event streaming microservice.",
     role: "Full Stack Engineer (Contract)",
     company: "Codefactory Innovative Hub",
     period: "Jun 2025 – Dec 2025",
@@ -44,6 +46,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "teknikforce",
+    summary: "Modernized enterprise SaaS backends via a .NET 6 to .NET 8 migration, zero-downtime deployments, and hardened JWT/RBAC security.",
     role: ".NET Backend Developer (Contract)",
     company: "Teknikforce",
     period: "Jan 2025 – May 2025",
@@ -55,6 +58,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "hng",
+    summary: "Integrated GroqAI LLM API into Telex with retry logic, exponential backoff, and circuit-breaker patterns to cut error rates by 40%.",
     role: "Backend Developer (Intern)",
     company: "HNG Tech",
     period: "Feb 2024 – Mar 2024",
@@ -69,65 +73,63 @@ export const EXPERIENCES: ExperienceItem[] = [
 export const PROJECTS: Project[] = [
   {
     id: "growthgia",
+    section: "featured",
+    summary: "Modular monolith e-commerce platform with Redis TTL-based caching cutting database round-trips by ~60% at peak traffic.",
     title: "GrowthGIA API",
     category: "Production E-Commerce Platform",
     challenge: "High-volume catalog reads and multi-context transactions needed isolated domain boundaries without sacrificing ACID safety.",
     solution: "Structured a .NET 10 modular monolith across Commerce, Identity, and Logistics using DDD and Vertical Slice Architecture. Layered Redis TTL-based cache invalidation on product catalog and pricing endpoints.",
     impact: "Cut database round-trips by ~60% at peak traffic, maintained P99 latency SLA, and served 25+ production endpoints.",
     tech: [".NET 10", "PostgreSQL", "Redis", "DDD", "Vertical Slice Architecture"],
-    imagePath: "/mansorySupplyHub.png",
-    github: "https://github.com/YastecHub",
-    mockupPrompt: "E-commerce architecture: domain modular monolith, Redis caching layer, PostgreSQL data store, and order fulfillment pipeline.",
-    stats: [{ label: "APIs", value: "25+" }, { label: "DB Read Load", value: "~60% Cut" }, { label: "Architecture", value: "Modular Monolith" }]
+    github: "https://github.com/YastecHub"
   },
   {
     id: "waas",
+    section: "featured",
+    summary: "Fintech wallet platform with Unit of Work and Kafka event streaming guaranteeing auditable processing for 10,000+ daily transactions.",
     title: "WAAS: Wallet as a Service",
     category: "Fintech Ledger Microservice",
     challenge: "Real-time wallet transactions required zero ledger write contention, auditable trails, and prevention of duplicate charges upon message replay.",
     solution: "Implemented Unit of Work + Kafka event streaming in the production ledger microservice, with idempotent Kafka consumer handlers guaranteeing transactional consistency across broker restarts.",
     impact: "Supported 10,000+ daily transactions with auditable, at-least-once processing and 45% lower p95 latency.",
     tech: ["C#", ".NET 8", "Apache Kafka", "EF Core", "SQL Server", "Clean Architecture"],
-    imagePath: "/waasImage.png",
-    github: "https://github.com/YastecHub",
-    mockupPrompt: "Wallet-as-a-Service architecture: Kafka stream, ledger ledger worker, SQL Server index execution plan, and audit logs.",
-    stats: [{ label: "Daily Txns", value: "10,000+" }, { label: "Latency p95", value: "-45%" }, { label: "Guarantee", value: "At-least-once" }]
+    github: "https://github.com/YastecHub"
   },
   {
     id: "whitteintelcoop",
+    section: "featured",
+    summary: "Enterprise cooperative backend applying CQRS and MediatR to decouple query paths and eliminate write-heavy reporting bottlenecks.",
     title: "WhitteIntelCoop API",
     category: "Enterprise Cooperative Platform",
     challenge: "Cooperative operations suffered slow reporting queries due to resource contention between heavy operational writes and complex analytical reads.",
     solution: "Architected a versioned (v1/v2) ASP.NET Core API applying CQRS and MediatR to decouple query paths from command writes, enforced by fine-grained JWT RBAC and EF Core Unit of Work.",
     impact: "Eliminated read-write bottlenecks under peak load, established automated xUnit CI pipelines, and integrated Serilog tracing.",
     tech: ["ASP.NET Core", "CQRS", "MediatR", "EF Core", "Docker Compose", "Serilog"],
-    github: "https://github.com/Whitteintel/AMJNReportSystem",
-    imagePath: "/amjnReportSystem.png",
-    mockupPrompt: "Enterprise cooperative API: CQRS separation, MediatR command handlers, EF Core Unit of Work, and Docker deployment.",
-    stats: [{ label: "Pattern", value: "CQRS + MediatR" }, { label: "Auth", value: "JWT RBAC" }, { label: "Testing", value: "xUnit Unit+Int" }]
+    github: "https://github.com/Whitteintel/AMJNReportSystem"
   },
   {
     id: "hostelsync-ai",
+    section: "award",
+    award: "1st Place • UNILAG Hackathon",
+    summary: "Predictive hostel allocation engine combining a Housing Vulnerability Index with spatial optimization to process 3,000+ applications in 0.34s.",
     title: "HostelSync AI",
     category: "Predictive Hostel Allocation Platform",
     challenge: "Manual university accommodation allocation created systemic delays and unfairly disadvantaged economically vulnerable students.",
     solution: "Engineered a two-stage AI allocation engine combining an algorithmic Housing Vulnerability Index with spatial optimization to evaluate student eligibility and bed distribution.",
     impact: "Processed 3,000+ applications in 0.34 seconds, achieving a 16x lift in bed-assignment rates for lowest-income students. Won 1st Place at the UNILAG Hackathon.",
-    tech: ["FastAPI", "Python", "Spatial Optimization", "AI Scoring", "REST APIs"],
-    mockupPrompt: "AI allocation engine: Housing Vulnerability Index scoring, spatial matrix distribution, and allocation queue metrics.",
-    stats: [{ label: "Honor", value: "1st Place" }, { label: "Applications", value: "3,000+" }, { label: "Latency", value: "0.34s" }]
+    tech: ["FastAPI", "Python", "Spatial Optimization", "AI Scoring", "REST APIs"]
   },
   {
     id: "sentra",
+    section: "award",
+    award: "3rd Place • TOS Hub Hackathon",
+    summary: "AI healthcare backend unifying symptom analysis, voice-to-diagnosis, OCR, and obstacle detection across 10+ REST endpoints.",
     title: "Sentra",
     category: "AI Healthcare & Accessibility Platform",
     challenge: "Accessible medical intake needed a unified, low-latency backend supporting multi-modal inputs including text, audio, and visual documents.",
     solution: "Engineered an LLM-powered NestJS service combining symptom analysis, voice-to-diagnosis, OCR parsing, and obstacle detection behind 10+ Swagger-documented REST endpoints.",
     impact: "Delivered a production-ready accessibility backend; recognized with 3rd Place at the TOS Hub Hackathon.",
-    tech: ["TypeScript", "NestJS", "GroqAI / LLM", "OCR", "Swagger / OpenAPI"],
-    imagePath: "/telexImage.png",
-    mockupPrompt: "AI accessibility platform: voice-to-diagnosis stream, OCR parser, symptom inference, and Swagger API documentation.",
-    stats: [{ label: "Honor", value: "3rd Place" }, { label: "Endpoints", value: "10+ Swagger" }, { label: "Stack", value: "NestJS + AI" }]
+    tech: ["TypeScript", "NestJS", "GroqAI / LLM", "OCR", "Swagger / OpenAPI"]
   },
   {
     id: "telex-agents",
@@ -137,10 +139,7 @@ export const PROJECTS: Project[] = [
     solution: "Integrated GroqAI into Telex with resilient retry policies, exponential backoff, and circuit-breaker patterns to gracefully absorb latency spikes and upstream API throttling.",
     impact: "Cut endpoint error rates by 40% under high concurrency and enabled real-time contextual bot responses.",
     tech: ["Node.js", "GroqAI", "WebSockets", "Telex API", "Resilience Patterns"],
-    github: "https://github.com/telexintegrations/SocialMediaAgent",
-    imagePath: "/faqResponderImage.png",
-    mockupPrompt: "Chat agent integration: GroqAI inference pipeline, circuit-breaker health gauge, and webhook event streaming.",
-    stats: [{ label: "Error Rate", value: "-40%" }, { label: "Pattern", value: "Circuit Breaker" }, { label: "Provider", value: "GroqAI" }]
+    github: "https://github.com/telexintegrations/SocialMediaAgent"
   }
 ];
 
@@ -191,17 +190,3 @@ export const EDUCATION = {
   institution: "University of Lagos",
   location: "Lagos, Nigeria"
 };
-
-// Retained for backward-compatibility if needed
-export const SKILLS: Skill[] = [
-  { name: "C#", level: 95, type: SkillType.BACKEND },
-  { name: "ASP.NET Core", level: 94, type: SkillType.BACKEND },
-  { name: "Apache Kafka", level: 88, type: SkillType.BACKEND },
-  { name: "Redis", level: 86, type: SkillType.BACKEND },
-  { name: "Clean Architecture", level: 94, type: SkillType.ARCHITECTURE },
-  { name: "CQRS / MediatR", level: 90, type: SkillType.ARCHITECTURE },
-  { name: "DDD", level: 88, type: SkillType.ARCHITECTURE },
-  { name: "SQL Server", level: 90, type: SkillType.DATABASE },
-  { name: "PostgreSQL", level: 86, type: SkillType.DATABASE },
-  { name: "Docker", level: 84, type: SkillType.DEVOPS }
-];

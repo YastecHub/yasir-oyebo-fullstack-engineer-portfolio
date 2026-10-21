@@ -1,4 +1,4 @@
-const CACHE_NAME = 'yastec-offline-v1';
+const CACHE_NAME = 'yasircodes-offline-v1';
 const OFFLINE_URL = '/offline.html';
 
 // Pre-cache the offline page on install

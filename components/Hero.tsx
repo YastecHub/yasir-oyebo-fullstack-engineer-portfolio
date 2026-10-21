@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
 
       {/* Right Column: Clean Circular Portrait */}
       {imageFailed ? (
-        <div className="portrait flex items-center justify-center font-mono text-lg font-bold">
+        <div className="portrait portrait-fallback">
           YO
         </div>
       ) : (

@@ -4,7 +4,7 @@ import { AWARDS, EDUCATION } from '../constants';
 
 const Awards: React.FC = () => {
   return (
-    <section id="awards" className="section-block">
+    <section id="honors" className="section-block">
       <div className="section-heading">
         <span>Honors &amp; Education</span>
         <span className="text-xs font-mono opacity-60">Hackathons &amp; Academic Background</span>

@@ -1,49 +1,41 @@
-# Yasir Oyebo - Backend Software Engineer Portfolio
+# Yasir Oladimeji — Software Engineer Portfolio
 
-This repository contains a minimal personal portfolio built with React + Vite showcasing backend systems, professional experience, selected work, awards, and contact links.
+Live at **https://yasircodes.tech/**
 
-**Quick links:**
-- **Contact links:** `components/Contact.tsx`
-- **Project metadata:** `metadata.json`, `constants.ts`
-- **Package manifest:** `package.json`
+A minimal single-page portfolio built with React 19, TypeScript and Vite, showcasing professional roles, featured work and award-winning projects.
 
-**Local Development**
+## Local development
 
-- **Prerequisites:** Node.js (LTS recommended) and `pnpm` installed.
+Prerequisites: Node.js (LTS) and `pnpm`.
 
-1. Install dependencies:
-
-```powershell
-cd C:\Projects\yasir-oyebo-fullstack-engineer-portfolio
+```bash
 pnpm install
+pnpm run dev       # http://localhost:3000
 ```
 
-2. Start the dev server:
+| Script | What it does |
+| --- | --- |
+| `pnpm run dev` | Start the Vite dev server |
+| `pnpm run build` | Production build into `dist/` |
+| `pnpm run preview` | Serve the production build locally |
 
-```powershell
-pnpm run dev
-```
+## Editing content
 
-The app will be served at `http://localhost:3000/` by default (Vite).
+All site content lives in **`constants.ts`**:
 
-**Available scripts** (from `package.json`):
-- `dev`: Start the Vite dev server (`vite`).
-- `build`: Build for production (`vite build`).
-- `preview`: Preview the production build (`vite preview`).
+- `HERO_DATA` — name, contact details, social links, resume path
+- `EXPERIENCES` — roles; `summary` is the line shown on the site
+- `PROJECTS` — set `section: "featured"` or `section: "award"` to show a project, `summary` for its one-liner, `github` for its link (falls back to the GitHub profile)
+- `TECHNICAL_SKILLS`, `AWARDS`, `EDUCATION` — used by the optional `Skills`, `Awards` and `Contact` sections in `components/` (not currently rendered in `App.tsx`)
 
-**Troubleshooting**
+## Project layout
 
-- If you see `'vite' is not recognized` when running `pnpm run dev`, run `pnpm install` first to ensure `node_modules` is created (this fixes the issue). Example:
+- `index.html` — SEO, Open Graph and Twitter meta tags (canonical domain: `yasircodes.tech`)
+- `App.tsx` — theme toggle, background, analytics, page composition
+- `components/` — `Navbar`, `Hero`, `Experience`, `Projects`, `Footer` (+ optional sections above)
+- `index.css` — all styles; dark/light themes via CSS variables
+- `public/` — resume PDF, portrait, favicon, `og-image.png`, `404.html`, `offline.html`, service worker (`sw.js`), `robots.txt`, `sitemap.xml`
 
-```powershell
-pnpm install
-pnpm run dev
-```
+## Analytics
 
-- If `pnpm install` fails because of an unavailable package version, update `package.json` to a published version.
-
-**Where to look in the code**
-- Contact links: `components/Contact.tsx`
-- Project content (projects, skills, experiences): `constants.ts`
-- Vite config: `vite.config.ts`
-- Entry files: `index.tsx`, `App.tsx`
+GA4 is initialised in `App.tsx` via `react-ga4`, and Vercel Analytics is injected at runtime.

@@ -802,3 +802,99 @@ body {
     transform: translateY(0) scale(1);
   }
 }
+
+/* "Open to work" status pill */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+:root[data-theme="light"] .status-pill {
+  color: #047857;
+  border-color: rgba(4, 120, 87, 0.25);
+  background: rgba(4, 120, 87, 0.08);
+}
+
+.status-dot {
+  position: relative;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: #10b981;
+  flex-shrink: 0;
+}
+
+.status-dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #34d399;
+  animation: statusPing 1.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.status-label {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .status-label {
+    display: inline;
+  }
+}
+
+@keyframes statusPing {
+  75%,
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* Portrait fallback (shown if the photo fails to load) */
+.portrait-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.125rem;
+  font-weight: 700;
+  background: var(--soft);
+}
+
+/* Utilities used by components */
+.normal-case {
+  text-transform: none;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+
+  .background-spotlight {
+    display: none;
+  }
+}
